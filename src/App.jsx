@@ -1,6 +1,12 @@
-function App() {
+import Scene from "./components/Scene";
+import Room from "./components/Room";
 
-  return 
+function App() {
+  return (
+    <Scene>
+      <Room />
+    </Scene>
+  );
 }
 
-export default App
+export default App;
