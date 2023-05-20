@@ -16,6 +16,7 @@ function Scene({ children }) {
       if (e.deltaY) {
         newScrollPosition = scrollPosition + (e.deltaY < 0 ? -10 : +10);
       } else {
+        e.preventDefault();
         newScrollPosition =
           scrollPosition + (deltaY.current > e.touches[0].pageY ? -10 : +10);
         deltaY.current = e.touches[0].pageY;
@@ -27,7 +28,7 @@ function Scene({ children }) {
 
     window.addEventListener("wheel", handleScroll);
     window.addEventListener("touchstart", handleTouchStart);
-    window.addEventListener("touchmove", handleScroll);
+    window.addEventListener("touchmove", handleScroll, { passive: false });
 
     return () => {
       window.removeEventListener("wheel", handleScroll);

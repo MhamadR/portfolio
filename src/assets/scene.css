@@ -33,4 +33,5 @@
   transform-style: preserve-3d;
   /*  */
   border: 5px solid blue;
+  scroll-behavior: smooth;
 }
