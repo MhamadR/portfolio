@@ -1,0 +1,10 @@
+.try {
+  position: absolute;
+  width: var(--width);
+  height: var(--height);
+  background-color: white;
+  border: 5px solid rgba(23, 81, 163, 0.805);
+  font-size: 150px;
+  transform: translateZ(calc(var(--depth) * -1.5));
+  backface-visibility: visible;
+}
