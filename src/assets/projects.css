@@ -28,3 +28,9 @@
   transform: translateZ(calc(var(--depth) * -1.5));
   backface-visibility: visible;
 }
+
+.try > p {
+  text-align: center;
+  font-weight: 900;
+  color: rgba(176, 27, 144, 0.892);
+}
