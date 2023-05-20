@@ -1,0 +1,41 @@
+.wall {
+  position: absolute;
+  width: var(--width);
+  height: var(--height);
+  backface-visibility: visible;
+}
+
+.wall--ceil {
+  height: var(--depth);
+  transform: translateY(calc(var(--ty) * -1)) rotateX(-90deg);
+  background-color: rgba(95, 158, 160, 0.8);
+}
+
+.wall--floor {
+  height: var(--depth);
+  transform: translateY(var(--ty)) rotateX(90deg);
+  background-color: rgba(95, 158, 160, 0.8);
+}
+
+.wall--right {
+  width: var(--depth);
+  transform: rotateY(90deg) translateZ(var(--tx));
+  background-color: rgba(165, 42, 42, 0.8);
+}
+
+.wall--left {
+  width: var(--depth);
+  transform: rotateY(-90deg) translateZ(var(--tx));
+  background-color: rgba(165, 42, 42, 0.8);
+}
+
+.wall--back {
+  transform: translateZ(calc(var(--tz) * -1));
+  background-color: rgba(139, 0, 139, 1);
+}
+
+.wall--front {
+  /* background-color: rgba(139, 0, 139, 0.8); */
+  background-color: transparent;
+  transform: rotateY(180deg) translateZ(-50vh);
+}
