@@ -1,0 +1,36 @@
+:root {
+  --height: 50vh; /*50vh*/
+  --width: 50vw; /*50vw*/
+  --z: 2; /*2*/
+  --depth: calc(var(--height) * var(--z));
+  --tx: calc(var(--width) / 2);
+  --ty: calc(var(--height) / 2);
+  --tz: calc(var(--depth) / 2);
+  --tCenter: translate(-50%, -50%);
+}
+
+.scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  perspective: 400px;
+  perspective-origin: 50% 50%;
+  background: rgba(128, 128, 128, 0.537);
+  overflow: hidden;
+  /* transform: perspective(400px) translateZ(200px); */
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--width);
+  height: var(--height);
+  /* transform: var(--tCenter) rotateY(90deg) translateX(200px); */
+  transform-style: preserve-3d;
+  /*  */
+  border: 5px solid blue;
+}
