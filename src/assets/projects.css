@@ -1,9 +1,29 @@
 .try {
   position: absolute;
-  width: var(--width);
-  height: var(--height);
-  background-color: white;
-  border: 5px solid rgba(23, 81, 163, 0.805);
+  width: var(200vw);
+  height: var(200vh);
+  background-image: linear-gradient(
+    to bottom right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  clip-path: polygon(
+    51% 8%,
+    100% 0,
+    96% 46%,
+    100% 100%,
+    53% 92%,
+    49% 92%,
+    0 100%,
+    3% 51%,
+    3% 44%,
+    0 0
+  );
   font-size: 150px;
   transform: translateZ(calc(var(--depth) * -1.5));
   backface-visibility: visible;

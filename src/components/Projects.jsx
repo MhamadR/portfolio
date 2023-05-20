@@ -4,7 +4,7 @@ function Projects() {
   return (
     <>
       <div className="try">
-        <p>Helloooo</p>
+        <p>Cheers Bitches!</p>
       </div>
     </>
   );
